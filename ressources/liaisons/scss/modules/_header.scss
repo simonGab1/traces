@@ -1,0 +1,377 @@
+.entete {
+  box-shadow: 0px 1px 5px grey;
+  z-index: 99;
+  position: relative;
+  width: 100%;
+  background-color: $gris;
+  top: 0px;
+
+
+  @media(min-width: $tablettePortrait) {
+    position: relative;
+  }
+
+
+  &__transaction {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: $gris;
+    height: 100px;
+    display: flex;
+
+    &--logo {
+      width: 110px;
+      height: 40px;
+      background-image: url("../../../public/liaisons/images/svg/logo.svg");
+      background-size: 110px 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-left: 10px;
+    }
+
+  }
+
+  &__utilisateur {
+    height: 50px;
+    text-align: right;
+    background-color: $grisNoir;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    @media(max-width: $tablettePortrait) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      background-color: $blanc;
+    }
+
+    &--lien {
+      margin: 0px 15px 0px 15px;
+      border-bottom: transparent 2px solid;
+      transition: all .2s ease-in-out;
+      @media(max-width: $tablettePortrait) {
+        margin: 0px;
+
+      }
+    }
+
+    &--lien:last-child {
+      padding: 6px 0px 6px 0px;
+    }
+
+    &--lien:hover {
+      border-bottom: $jauneBtnHover 2px solid;
+
+    }
+
+    &--lien a {
+      text-decoration: none;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      @media(max-width: $tablettePortrait) {
+        padding: 0px;
+        color: $noir;
+        font-size: 15px;
+      }
+
+    }
+
+    &--icone {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__recherche {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: $gris;
+    display: none;
+    height: 100px;
+    @media (min-width: 600px) {
+      display: flex;
+    }
+
+    &--logo {
+      width: 200px;
+      height: 75px;
+      background-image: url("../../../public/liaisons/images/svg/logo.svg");
+      background-size: 200px 75px;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-left: 30px;
+      @media (max-width: 1200px) {
+
+        width: 150px;
+        height: 65px;
+        background-size: 150px 65px;
+
+      }
+    }
+
+    &--form {
+      @media (max-width: $tablettePortrait) {
+        padding: 20px 5px 10px 5px;
+        display: flex;
+        align-items: center;
+        background-color: $blanc;
+        margin: 0px;
+        position: relative;
+
+      }
+    }
+  }
+
+  &__menuPanier {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    height: 50px;
+    background-color: $blanc;
+    @media (max-width: $tablettePortrait) {
+      height: 70px;
+      justify-content: space-around;
+
+    }
+
+
+    &--logo {
+      width: 110px;
+      height: 38px;
+      background-image: url("../../../public/liaisons/images/svg/logo.svg");
+      background-size: 110px 38px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+
+    }
+
+    &--background {
+      background-color: $grisFoncer;
+      margin-right: 30px;
+      padding: 2px 0px 0px 20px;
+      border: 2px solid transparent;
+      transition: all .2s ease-in-out;
+      height: 50px;
+      position: absolute;
+      right: 0px;
+    }
+
+    &--background:hover {
+      border: 2px solid $jauneBtnHover;
+    }
+
+    &--icone {
+      width: 50px;
+      height: 40px;
+    }
+
+    &--iconePanier {
+      height: 70px;
+    }
+
+    &--lien {
+      display: flex;
+      align-items: center;
+
+    }
+
+    &--lienMobile {
+
+      position: relative;
+
+    }
+
+    &--lienMobileArticle {
+
+      left: 40px;
+      position: absolute;
+      background-color: $jauneBtn;
+      border-radius: 100%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      margin-top: 10px;
+
+    }
+
+    &--lienMobileIcone {
+      width: 65px;
+      height: 70px;
+
+    }
+  }
+
+  &__menu {
+    padding-right: 200px;
+
+
+    &--lien {
+      display: inline-block;
+      margin: 0px 20px 0px 20px;
+
+    }
+
+
+    &--lien a {
+      text-decoration: none;
+      color: black;
+      border-bottom: transparent 2px solid;
+      transition: all .2s ease-in-out;
+
+    }
+
+    &--lien a:hover {
+      border-bottom: $jauneBtnHover 2px solid;
+    }
+
+    &--lienActif {
+      border-bottom: $jauneBtnHover 2px solid;
+    }
+  }
+
+  &__retroaction {
+    position: fixed;
+    right: 0px;
+    margin: 0 auto;
+    animation: fadeOut 3s linear forwards;
+    animation-delay: 3s;
+    bottom: 0px;
+    width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    @media (min-width: $tablettePortrait) {
+      left: 0px;
+      position: absolute;
+      width: 500px;
+      top: 43px;
+    }
+
+    &--icone {
+      width: 80px;
+      height: 80px;
+    }
+
+    &--triangle {
+      display: none;
+      @media (min-width: $tablettePortrait) {
+        display: block;
+        margin-left: 350px;
+        border-top: 0 solid #EE7C31;
+        border-left: 0 solid #F5D97B;
+        border-bottom: 0 solid $blanc;
+        border-right: 0 solid #8DB434;
+        border-top-width: 10px;
+        border-left-width: 30px;
+        border-right-width: 30px;
+        border-bottom-width: 20px;
+        background: transparent;
+        width: 0;
+        height: 0;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-top-color: transparent;
+      }
+    }
+
+    &--message {
+      margin: 0px;
+      background-color: $blanc;
+      display: flex;
+      align-items: center;
+      @media (max-width: 1200px) {
+        border: 2px solid $jauneBtn;
+      }
+
+
+      &--titre {
+        font-weight: bold;
+        margin-right: 3px;
+      }
+    }
+  }
+
+}
+
+
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+#myLinks {
+  display: none;
+  width: auto;
+}
+
+.topnav a {
+  color: $noir;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+}
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.english {
+  font-size: 14px;
+}
+
+hr {
+  border: 1px solid $noir;
+  margin: 0px 10px 0px 10px;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    height: 0px;
+  }
+}
+

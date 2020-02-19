@@ -1,0 +1,132 @@
+/**
+ * @author Andréa Deshaies <andreadeshaies@gmail.com>
+*/
+
+/**
+ * ------------------
+ * TABLE DES MATIÈRES
+ * ------------------
+ * GÉNÉRAL
+
+ * PANIER CONFIRMATION
+
+
+ */
+
+
+/*** GÉNÉRAL ***/
+
+.confirmation{
+  &__h1{
+    font-size: 28px;
+    margin: 45px 10px 0 10px;
+  }
+  &__texte{
+    font-weight: 300;
+    margin: 15px 10px 38px 10px;
+  }
+  &__flexIcon{
+    display: flex;
+  }
+  &__numero{
+    margin-left: 5px;
+    display: block;
+    align-self: center;
+  }
+  &__sommaire{
+    margin-top: 20px;
+  }
+  &__courriel{
+    margin-left: 5px;
+    align-self: center;
+  }
+  &__iconNumero{
+    width: 55px;
+    height: 55px;
+  }
+  &__iconEmail{
+    width: 90px;
+    height: 90px;
+  }
+  &__bg{
+    background-color: white;
+    padding: 5px 10px 20px 10px;
+    margin: 20px 0px;
+  }
+  &__h2{
+    font-size: 20px;
+  }
+  &__cc{
+    align-self: center;
+  }
+  &__lien{
+    border-bottom: 1px solid $jauneBtnHover;
+    font-size: 20px;
+    padding: 5px;
+    display: block;
+    width: 230px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 56px;
+    margin-top: 40px;
+    transition: ease 1s;
+    & :hover{
+        transform: scale(1);
+    }
+  }
+  &__info{
+    display: block;
+  }
+}
+
+#BtnImpression{
+  width: 100%;
+}
+
+
+
+.confirmationVide{
+  &__h1{
+    font-size: 27px;
+    margin: 74px 10px 0 10px;
+  }
+}
+
+
+/*** PANIER CONFIRMATION ***/
+
+.confirmationPanier{
+  &__flex{
+    display: flex;
+    align-items: center;
+  }
+  &__totalFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__totalFlex:last-of-type{
+    font-size: 18px;
+    font-weight: 600;
+    border-top: solid 1px lightgrey;
+    margin-top: 15px;
+    padding-top: 5px;
+  }
+  &__contenu{
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  &__prix{
+    margin: 5px 0 20px 0;
+    font-size: 18px;
+  }
+  &__titre{
+    font-size: 18px;
+    margin: 0;
+  }
+  &__sous{
+    margin: 5px 0 0 0;
+    opacity: 60%;
+    font-style: italic;
+  }
+}

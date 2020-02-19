@@ -1,0 +1,133 @@
+.checkbox {
+display: flex;
+  padding:0 20px 20px;
+  max-width: 800px;
+  justify-content: flex-start;
+  align-content: center;
+  label{
+    margin-top: 4px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  input[type='checkbox'],input[type='radio'] {
+    appearance: none;
+    width: 34px;
+    height: 34px;
+    border: black 1px solid;
+    background-image: url("../../liaisons/images/svg/checkbox.svg");
+
+    &:checked {
+      background-image: url("../../liaisons/images/svg/checkbox_checked.svg");
+    }
+  }
+}
+
+.dateExpiration{
+  display: flex;
+  justify-content: flex-start;
+  select{
+    margin-right: 20px;
+  }
+}
+
+.navTransaction{
+  max-width: $bureau;
+  margin: auto;
+  &__liste{
+    display: flex;
+    justify-content: space-between;
+
+
+  }
+  &__item{
+    width: 100%;
+    text-align: center;
+    margin:1px;
+    margin-top: 20px;
+
+    padding:11px 0 14px;
+    &li{
+      width: 100%;
+      text-align: center;
+      margin:1px;
+      margin-top: 20px;
+
+      padding:11px 0 14px;
+    }
+    &--actif{
+      background-color: $jauneBtn;
+    }
+    &--inactif{
+      background-color: $grisFoncer;
+    }
+    &--passee{
+      background-color: $jauneBtnHover;
+      opacity: 0.8;
+      &:hover{
+        background-color: $jauneBtn;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.conteneurTransaction {
+  width: 95%;
+  max-width: $bureau;
+  @media(max-width: $tablettePortrait) {
+    margin: 0 10px;
+  }
+}
+  .transaction {
+    & .soustotalArticle {
+      margin-right: 3px;
+    }
+
+    & .nbrItem {
+      margin: 0px 3px;
+    }
+
+    & .changerQte {
+      display: none;
+    }
+  }
+
+  .facturation {
+    &__typeCarte {
+      max-width: 530px;
+      border: 1px $jauneBtn solid;
+      padding: 0 20px;
+      margin-bottom: 10px;
+      background-color: $grisPale;
+    }
+
+    &__iconNumero {
+      width:31%;
+      max-width: 150px;
+      height: 100px;
+
+    }
+  }
+
+  .carteSelected {
+    border: 2px $jauneBtn solid;
+    box-shadow: -1px 5px 10px 0px #888888;
+  }
+
+  .conteneurInfoFacturation{
+    border-bottom: solid 2px #ECEBEB;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+.conteneurInfoFacturation:last-of-type{
+  border-bottom: solid 2px transparent;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.bg_transaction{
+  background: white;
+  padding: 30px 10px;
+  margin: 20px 0 0px 0;
+}
+

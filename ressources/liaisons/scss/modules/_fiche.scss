@@ -1,0 +1,457 @@
+/**
+ * @author Simon-Gabriel Côté-Poulin <simon_gab@outlook.com>
+*/
+/**
+ * ------------------
+ * TABLE DES MATIÈRES
+ * ------------------
+ * LIVRE
+
+ * Info sur le livre
+
+ * Résumé
+
+ * Détails du produit
+
+ * Critiques
+
+ * Honneurs reçu
+
+ *Commentaires des utilisateurs
+
+
+
+ */
+
+.vide {
+  @media(min-width: $tablettePortrait) {
+    width: span(1 of 12);
+    margin-right: gutter(12);
+    display: inline-block;
+  }
+}
+
+/* Info sur le livre */
+.infoMobile {
+  display: block;
+  @media(min-width: $tablettePortrait) {
+    display: none;
+  }
+}
+.infoTable {
+  display: none;
+  @media(min-width: $tablettePortrait) {
+    display: block;
+  }
+
+}
+
+/* LIVRE */
+.livre {
+  margin: 0px 10px 0px 10px;
+  padding-top: 10px;
+  @media(min-width: $tablettePortrait) {
+    width: span(10 of 12);
+    display: inline-block;
+    margin-right: gutter(12);
+  }
+  &__achat {
+    @media(min-width: $tablettePortrait) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      margin-top: 20px;
+    }
+    &--image {
+      @media(min-width: $tablettePortrait) {
+        text-align: center;
+        width: span(4 of 10);
+        margin-right: gutter(12);
+      }
+    }
+    &--image img {
+      display: block;
+      margin: 0 auto;
+    }
+    &--conteneur {
+      @media(min-width: $tablettePortrait) {
+        width: span(6 of 10);
+      }
+      &--titre {
+        margin-bottom: 10px;
+        @media(min-width: $tablettePortrait) {
+          font-size: 36px;
+          margin: 0;
+        }
+      }
+      &--soustitre {
+        font-family: $policeCorps;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 10px;
+        @media(min-width: $tablettePortrait) {
+          margin-bottom: 5px;
+        }
+      }
+
+      &--auteur {
+        font-size: 18px;
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        @media(min-width: $tablettePortrait) {
+          margin-bottom: 0;
+        }
+      }
+
+      &--blogue {
+        margin-bottom: 10px;
+        text-decoration: underline;
+        @media(min-width: $tablettePortrait) {
+          display: inline-block;
+          margin-bottom: 0px;
+        }
+      }
+      &--avis {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+      }
+      &--avis a {
+        margin-left: 10px;
+        border-bottom: transparent 2px solid;
+        transition: all .2s ease-in-out;
+      }
+      &--avis a:hover {
+        border-bottom: $jauneBtnHover 2px solid;
+      }
+      &--prix {
+        font-family: $policeCorps;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      &--quantiteLabel {
+        width: span(1 of 6);
+        margin-right: gutter(4);
+      }
+      &--quantite {
+        @media(min-width: $tablettePortrait) {
+          border: 1px solid $noir;
+          min-width: 80px;
+          background-position-x: 50px;
+        }
+      }
+      &--boutons {
+        @media(min-width: $tablettePortrait) {
+          margin-top: 20px;
+          display: flex;
+          flex-wrap: nowrap;
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+      &--btnAcheter {
+        width: span(4 of 4);
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @media(min-width: $tablettePortrait) {
+          width: span(3 of 6);
+          margin-right: gutter(6);
+        }
+      }
+      &--favoris {
+        margin: 0 auto;
+        width: span(2 of 4);
+        @media(min-width: $tablettePortrait) {
+          text-align: center;
+          margin: 0 auto;
+          width: span(3 of 6);
+          border-bottom: none;
+        }
+        &Icone {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          border-bottom: transparent 2px solid;
+          transition: all .2s ease-in-out;
+          padding: 0 5px 2px 5px;
+          width: 180px;
+          margin: 0 auto;
+
+          @media(min-width: $tablettePortrait) {
+            justify-content: center;
+          }
+          &:hover {
+            @media(min-width: $tablettePortrait) {
+              border-bottom: $jauneBtn 2px solid;
+              fill: $jauneBtnHover;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+/* ICONE */
+  .icone {
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+  }
+
+  /* Résumé */
+  &__resume {
+    margin-bottom: 40px;
+  }
+
+  /*Détails du produit*/
+
+  &__detail {
+    margin-bottom: 40px;
+    &--conteneur {
+      @media(min-width: $tablettePortrait) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
+    }
+    &--liste1 {
+
+      @media(min-width: $tablettePortrait) {
+        width: span(6 of 12);
+      }
+
+      li {
+        margin-bottom: 15px;
+        @media(min-width: $tablettePortrait) {
+          margin-bottom: 5px;
+        }
+
+      }
+
+      li p {
+        display: inline;
+      }
+
+      li p:first-child {
+
+        font-weight: bold;
+        font-size: 16px;
+
+        @media(min-width: $tablettePortrait) {
+          font-weight: bold;
+          font-size: 18px;
+        }
+      }
+    }
+
+    &--liste2 {
+
+      @media(min-width: $tablettePortrait) {
+        width: span(6 of 12);
+      }
+
+      li {
+        margin-bottom: 15px;
+        @media(min-width: $tablettePortrait) {
+          margin-bottom: 5px;
+        }
+      }
+
+      li p {
+        display: inline;
+
+      }
+
+      li p:first-child {
+
+        font-weight: bold;
+        font-size: 16px;
+
+        @media(min-width: $tablettePortrait) {
+          font-weight: bold;
+          font-size: 18px;
+        }
+
+      }
+
+    }
+
+
+  }
+
+  /* Critiques sur le livre*/
+
+  &__critique {
+    margin-bottom: 40px;
+
+    &--commentaire {
+
+
+      background-color: $grisFoncer;
+      border: 1px solid $jauneBtnHover;
+      padding: 10px;
+      margin-bottom: 20px;
+
+
+      &--date {
+        display: inline-block;
+        margin: 0;
+      }
+
+      &--journal {
+
+        display: inline-block;
+        margin: 0;
+        font-weight: bold;
+
+      }
+
+      &--citation {
+      }
+
+      &--auteur {
+
+        text-align: right;
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+
+      }
+    }
+  }
+
+  /* Honneurs reçu*/
+
+  &__honneur {
+    &--titre {
+      font-weight: bold;
+    }
+
+    &--prix {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__avis {
+
+    @media(min-width: $tablettePortrait) {
+      margin-bottom: 40px;
+    }
+
+    &--titre {
+      display: block;
+      @media(min-width: $tablettePortrait) {
+        display: flex;
+        align-items: center;
+      }
+
+      &--nom {
+        margin-top: 0px;
+      }
+
+      &--etoiles {
+        display: flex;
+        align-items: flex-start;
+        margin-left: 0px;
+        @media(min-width: $tablettePortrait) {
+          align-items: center;
+
+
+          margin-left: 40px;
+        }
+      }
+
+      &--etoiles p {
+        margin: 0px 0px 30px 10px;
+        @media(min-width: $tablettePortrait) {
+          margin: 0px 0px 0px 10px;
+        }
+      }
+
+
+    }
+
+    /*Commentaires des utilisateurs*/
+
+    &--commentaire {
+
+
+      margin-bottom: 20px;
+      background-color: $grisFoncer;
+      border: 1px solid $jauneBtnHover;
+
+
+      &--userIcon {
+
+
+        float: left;
+        margin: 10px 10px 0px 10px;
+        width: 80px;
+        height: 80px;
+
+      }
+
+      &--avis {
+        display: block;
+        @media(min-width: $tablettePortrait) {
+          display: flex;
+          align-items: center;
+        }
+
+      }
+
+      &--date {
+        margin: 10px 0px 0px 0px;
+        @media(min-width: $tablettePortrait) {
+          margin: 0;
+        }
+      }
+
+      &--titre {
+        font-size: 18px;
+        margin: 0;
+
+        @media(min-width: $tablettePortrait) {
+          font-size: 22px;
+          margin: 0px 20px 0px 0px;
+        }
+      }
+
+      &--auteur {
+        margin: 0px 0px 20px 0px;
+        @media(min-width: $tablettePortrait) {
+          margin: 0;
+        }
+
+      }
+
+      &--message {
+        margin: 10px;
+
+      }
+
+      &--btn {
+        width: span(4 of 4);
+        margin-bottom: 40px;
+        @media(min-width: $tablettePortrait) {
+          width: span(2 of 10);
+        }
+      }
+    }
+  }
+}
+
+.livre h2 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  @media(min-width: $tablettePortrait) {
+    margin-top: 0px;
+  }
+
+}

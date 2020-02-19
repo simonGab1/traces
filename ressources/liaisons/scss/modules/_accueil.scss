@@ -1,0 +1,370 @@
+/**
+ * @author Andréa Deshaies <andreadeshaies@gmail.com>
+*/
+
+/**
+ * ------------------
+ * TABLE DES MATIÈRES
+ * ------------------
+ * Coup de coeur
+
+ * Nouveautés
+
+ * Actualités littéraires
+
+ * Icones des liens de l'accueil
+
+ */
+
+
+.accueil__h2{
+  font-size: 30px;
+  font-weight: normal;
+  @media (min-width: 600px) {
+    font-size: 55px;
+    margin-bottom: 5px;
+  }
+}
+
+
+/*** Coup de coeur ***/
+.cc{
+  & img{
+    width: 100%;
+  }
+  margin: 0 10px 0 10px;
+  border-top: solid 15px white;
+  border-bottom: solid 15px white;
+  padding: 20px 0px;
+  &__critique{
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 2px solid $jauneBtnHover;
+  }
+  &__titre{
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  &__auteur{
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0;
+  }
+  &__texte{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 127.6%;
+  }
+  & .btn{
+    width: 300px;
+    padding: 15px 63px;
+    & a{
+      color: black;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+  & .btnCoupCoeur{
+    background-color: #FFD733;
+    width: 100%;
+    height: 50px;
+    border-radius: 2px;
+    border: none;
+    color: black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 50px;
+    margin: 20px 0;
+    display: block;
+    &:hover{
+      background-color: $jauneBtnHover;
+      box-shadow: 0px 2px 4px rgba(39, 39, 39, 0.25);
+    }
+  }
+  &__lien{
+    margin: 40px 0 10px 0;
+  }
+  @media (min-width: 600px) {
+    display: flex;
+    border: solid 20px white;
+    padding: 20px 40px;
+    &__bloc{
+      margin-left: 37px;
+      width: span(8 of 12);
+    }
+    &__critique{
+      font-size: 22px;
+    }
+    &__lien{
+      float: right;
+    }
+    &__conteneur{
+      margin: 110px 0 75px 0;
+    }
+  }
+}
+
+
+/*** Nouveautés ***/
+.n{
+  border-top: solid 15px white;
+  border-bottom: solid 15px white;
+  padding: 20px 0px;
+
+  &__livre{
+    background-color: white;
+    padding: 10px;
+    width: 240px;
+    margin: auto;
+    transition: all .2s ease-in-out;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+  &__livre:last-of-type{
+    background-color: transparent;
+  }
+  &__livre:first-of-type{
+    background-color: transparent;
+  }
+  &__titre{
+    font-weight: normal;
+    font-size: 17px;
+    margin: 5px 0;
+    color: black;
+  }
+  &__lien{
+    text-decoration: none;
+  }
+  &__auteur{
+    font-weight: 300;
+    margin: 0;
+  }
+  &__prix{
+    margin-top: 15px;
+    display: flex;
+  }
+  &__icon{
+    margin: 0 10px 0 0;
+  }
+  & .btn{
+    width: 100%;
+    margin-top: 15px;
+  }
+  & div:nth-of-type(2) {
+    display: none;
+  }
+  & div:nth-of-type(3) {
+    display: none;
+  }
+  @media (min-width: 500px) {
+    display: flex;
+    align-content: space-between;
+    border: none;
+    &__livre{
+      width: 320px;
+    }
+    & div:nth-of-type(2) {
+      display: block;
+    }
+    & div:nth-of-type(3) {
+      display: none;
+    }
+  }
+  @media (min-width: 900px) {
+    display: flex;
+    align-content: space-between;
+    border: none;
+    &__livre{
+      width: 320px;
+    }
+    & div:nth-of-type(2) {
+      display: block;
+    }
+    & div:nth-of-type(3) {
+      display: block;
+    }
+  }
+}
+
+.flex_titre{
+  margin-top: 60px;
+  & h2{
+    border-bottom: solid 2px $jauneBtnHover;
+    margin-bottom: 10px;
+  }
+  & div{
+    display: block;
+    margin-bottom: 20px;
+    text-align: right;
+    margin-right: 10px;
+  }
+
+}
+
+@media (min-width: 600px) {
+  .background_nouveaute{
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    border-top: solid 15px white;
+    border-bottom: solid 15px white;
+    margin-bottom: 75px;
+  }
+  .flex_titre{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    & h2{
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    & div{
+      display: inline;
+      margin-bottom: 0;
+      text-align: left;
+      margin-right: 0;
+    }
+  }
+}
+
+
+@media (max-width: 500px){
+  #nouveaute_left{
+    display: none;
+  }
+  #nouveaute_right{
+    display: none;
+  }
+}
+
+@media (min-width: 500px){
+  #nouveaute_left{
+    display: flex;
+
+  }
+  #nouveaute_right{
+    display: flex;
+  }
+}
+
+
+
+
+
+
+/*** Actualités littéraires ***/
+.al{
+  display: flex;
+  flex-flow: column;
+  background-color: white;
+  margin-bottom: 40px;
+  & img{
+    width: 100%;
+  }
+  & .blocA{
+    order: 2;
+  }
+  & .blocB{
+    order: 1;
+    margin: 0 10px;
+  }
+  & .blocC{
+    order: 3;
+    margin: 0 10px;
+  }
+  &__date{
+    font-weight: 300;
+    font-size: 16px;
+    text-align: right;
+    text-align: right;
+    display: block;
+    margin: 10px 10px;
+  }
+  &__titre{
+    font-family: $policeTitres;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  &__auteur{
+    font-weight: normal;
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  &__texte{
+    font-weight: 300;
+    font-size: 16px;
+  }
+  @media (min-width: 600px) {
+    display: block;
+    border: solid 20px white;
+    background-color: transparent;
+    padding: 30px 30px 150px 30px;
+    & .blocA{
+      order: 1;
+      float: right;
+      & img{
+        width: 340px;
+      }
+    }
+    & .blocA{
+      order: 2;
+      margin-left: 30px;
+    }
+    & .blocB{
+      order: 3;
+    }
+    & .blocC{
+      order: 3;
+    }
+    & .btnLien{
+      float: right;
+      width: span(3 of 12);
+    }
+
+  }
+}
+
+
+
+.al:nth-of-type(2n) .blocA{
+  float: left;
+  margin: 0 30px 0 0;
+}
+
+
+/*** Icones des liens de l'accueil ***/
+
+@media (min-width: 600px) {
+  .lien{
+    &__titre{
+      font-weight: 500;
+      font-size: 24px;
+      display: flex;
+      flex-flow: column;
+      transition: all .2s ease-in-out;
+      &:hover {
+        transform: scale(1.02);
+      }
+      &:after {
+        content: "";
+        display: inline-block;
+        height: 21px;
+        width: 300px;
+        background-size: contain;
+        background-image: url(../images/svg/lien1.svg);
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

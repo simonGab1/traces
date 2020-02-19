@@ -1,0 +1,94 @@
+var objMessages =
+    {
+        "nom": {
+            "vide": "devez entrer votre nom de famille",
+            "pattern": "Pour le nom de famille, les accents français, les espaces, les tirets et les apostrophes sont permis."
+        },
+        "prenom": {
+            "vide": "Vous devez entrer votre prénom",
+            "pattern": "Pour le prénom, les accents français, les espaces, les tirets et les apostrophes sont permis."
+        },
+
+        "adresse": {
+            "vide": "Vous devez entrer votre adresse",
+            "pattern": "Les chiffres, les lettres, les accents français, les espaces, les tirets et les apostrophes sont permis."
+        },
+        "ville": {
+            "vide": "Vous devez entrer le nom de la ville ou du village",
+            "pattern": "Les accents français, les espaces, les tirets et les apostrophes sont permis."
+        },
+        "province": {
+            "vide": "Vous devez choisir la province.",
+            "pattern": "Les accents français, les espaces, les tirets et les apostrophes sont permis."
+        },
+        "code_postal": {
+            "vide": "Vous devez entrer votre code postal",
+            "pattern": "Le code postal doit respecter le format X1X 1X1."
+        },
+        "courriel": {
+            "vide": "Vous devez entrer votre adresse courriel",
+            "pattern": "Assurez-vous d'entrer une adresse courriel valide."
+        },
+        "telephone": {
+            "vide": "Vous devez entrer votre numéro de téléphone",
+            "pattern": "Assurez-vous d'entrer une numéro valide 1111111111"
+        },
+        "motdepasse": {
+            "vide": "Vous devez entrer un mot de passe",
+            "pattern": "Assurez-vous d'avoir 1 chiffre et une majuscule"
+        },
+
+        "adresse_defaut": {
+            "vide": "",
+            "pattern": ""
+        },
+        "adresse_facturation": {
+            "vide": "",
+            "pattern": ""
+        },
+        "btn_submit": {
+            "vide": "",
+            "pattern": ""
+        },
+
+
+
+
+
+
+
+        "paiement": {
+            "vide": "Vous devez choisir un mode de paiement",
+            "pattern": ""
+        },
+
+        "nomtitulaire": {
+            "vide": "Vous devez entrer le nom du titulaire de la carte",
+            "pattern": "Pour le nom, les accents français, les espaces, les tirets et les apostrophes sont permis."
+        },
+        "numCredit": {
+            "vide": "Vous devez entrer le numéro de la carte de crédit",
+            "pattern": "Veuillez entrer un numéro de carte valide."
+        },
+        "codeSecurite": {
+            "vide": "Vous devez entrer un code de sécurité",
+            "pattern": "Le code de sécurité est composé de 3 chiffres qui se situe à l'arrière de votre carte."
+        },
+        "expiration": {
+            "vide": "Vous devez sélectionner la date d'Expiration de votre carte.",
+            "moisVide": "Vous devez sélectionner le mois d'Expiration de votre carte.",
+            "anneeVide": "Vous devez sélectionner l'année d'Expiration de votre carte.",
+            "pattern": "Cette date n'est pas valide.",
+            "expire": "Cette date est expiré."
+        },
+
+
+        "courrielconnexion": {
+            "vide": "Vous devez entrer votre adresse courriel",
+            "pattern": "Il n'y a pas de compte à cette adresse courriel."
+        },
+        "motdepasseconnexion": {
+            "vide": "Vous devez entrer un mot de passe",
+            "pattern": "Le mot de passe ne correspond pas."
+        }
+    }

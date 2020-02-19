@@ -1,0 +1,222 @@
+/**
+ * @author Andréa Deshaies <andreadeshaies@gmail.com>
+*/
+
+/**
+ * ------------------
+ * TABLE DES MATIÈRES
+ * ------------------
+ * GESTION DES ERREURS
+
+ * GÉNÉRAL
+
+ * CONNEXION
+
+ * SE CREER UN COMPTE
+
+ * RECHERCHE
+
+ */
+
+
+
+/* GESTION DES ERREURS */
+.indice {
+  font-style: italic;
+  opacity: 0.6;
+}
+.erreur{
+  color: black;
+  display: flex;
+  margin-top: 5px;
+  font-weight: 300;
+  &::before{
+    content: '';
+    display: inline-block;
+    fill: red;
+    width: auto;
+    height: 28px;
+    margin-bottom: -8px;
+    padding-left: 35px;
+    background-image: url(../images/svg/warning-1.svg);
+    padding-top: -6px;
+    background-repeat: no-repeat, repeat;
+    background-position: left 2px top 18%, 32px 0;
+  }
+}
+
+
+/* GÉNÉRAL */
+div.facturation__checkbox{
+  display: flex;
+  flex-flow: wrap;
+  padding:0;
+}
+.choixPaiement {
+  display: flex;
+  margin: 10px 0;
+  width: 100%;
+}
+
+select.selectBlanc {
+  border: 1px solid white;
+}
+
+.inputBlanc {
+  border: 1px solid white;
+  height: 45px;
+  border-radius: 0px;
+}
+
+.inputGeneral {
+  border: 1px solid #474747;
+  height: 45px;
+  border-radius: 0px;
+  padding-left: 10px;
+  padding-right: 40px;
+  color: $grisNoir;
+  &.success{
+    background-image: url(../images/svg/success-1.svg);
+    background-repeat: no-repeat, repeat;
+    background-position: right 6px top 46%, 32px 0;
+    border-bottom: solid #8CB21E 1.5px;
+  }
+  &--petit{
+    width: 150px;
+  }
+}
+.inputRecherche {
+  width: 430px;
+  padding-left: 40px;
+  background: url(../images/svg/recherche.svg) no-repeat right #fff;
+  background-repeat: no-repeat, repeat;
+  background-position: left 10px top 50%, 0 0;
+  @media (max-width: 1000px) {
+    width: 100px;
+  }
+  @media (max-width: 600px) {
+    width: 60%;
+    background-position: right 10px top 50%, 0 0;
+    padding-left: 10px;
+    padding-right: 40px;
+
+    border: solid 1px #474747;
+  }
+}
+
+.menuDeroulant {
+  min-width: 117px;
+  height: 49px;
+  background: url(../images/svg/downArrow.svg) no-repeat right #fff;
+  -webkit-appearance: none;
+  border: solid 1px #474747;
+  border-radius: 0;
+  padding: 0px 40px 0px 10px;
+  font-size: 16px;
+  font-weight: normal;
+  background-size: 21px;
+  background-repeat: no-repeat, repeat;
+  background-position: right 10px top 50%, 0 0;
+  &__entete {
+    border: 1px solid $noir;
+    @media (max-width: 600px) {
+      width: 40%;
+    }
+  }
+  &.success{
+       background-image: url(../images/svg/downArrow.svg), url(../images/svg/success-1.svg);
+       background-repeat: no-repeat, no-repeat;
+       background-position: right 10px top 50%, right 35px top 50%;
+       border-bottom: solid #8CB21E 1.5px;
+     }
+}
+@media (min-width: 600px) {
+  .conteneurForm {
+    width: 600px;
+    margin: auto;
+  }
+}
+.erreurInput{
+  border-bottom: solid #CE4632 1.5px;
+}
+
+
+/* CONNEXION */
+.alignInput {
+  display: inline-grid;
+}
+.formFlex {
+  display: flex;
+  flex-flow: column;
+}
+.bg_connexion {
+  background: white;
+  padding: 30px 10px;
+  margin: 20px 0 40px 0;
+  @media (min-width: 600px) {
+    padding: 50px;
+  }
+}
+.connexion {
+  &__item {
+    margin-bottom: 20px;
+  }
+  & .btn {
+    width: 100%;
+  }
+  &__h1 {
+    margin-top: 50px;
+  }
+  &__creer {
+    margin: 15px 0;
+    display: block;
+  }
+}
+
+
+
+/* SE CREER UN COMPTE */
+.creer {
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  & .btn {
+    width: 100%;
+  }
+
+  &__h1 {
+    margin-top: 50px;
+  }
+}
+
+/* RECHERCHE */
+.rechercheResultats{
+  position: absolute;
+  z-index: 99;
+  background-color: $blanc;
+  width: 470px;
+  margin-left: 117px;
+  text-align: left;
+  ul{
+    width: 100%;
+    li{
+      border:solid $jauneBtn 1px;
+      padding:10px ;
+
+      cursor: pointer;
+      &:hover{
+        background-color: $jauneBtnHover;
+      }
+    }
+  }
+  &--mobile{
+    margin-left: 35%;
+    margin-top: 70px;
+    width:60%;
+    max-width: 270px;
+    overflow: hidden;
+    top:0;
+  }
+
+}

@@ -1,0 +1,330 @@
+.panier {
+  @media(max-width: $tablettePortrait) {
+    margin: 0px 10px 0px 10px;
+  }
+
+  &--mobile {
+    display: block;
+    @media(min-width: 800px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      align-items: center;
+    }
+    @media(min-width: $tablettePortrait) and (max-width: 1000px)  {
+      margin-left: 40px;
+    }
+    @media (max-width: 800px) {
+      margin-left: 10px;
+      width: 100%;
+
+    }
+
+  }
+
+  &__notification {
+    background-color: $blanc;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 110px;
+    padding-top: 15px;
+    @media(min-width: $tablettePortrait) {
+      padding: 0px 20px;
+      background-color: $grisPale;
+      border: 11px solid $blanc;
+      flex-direction: row;
+      justify-content: space-between;
+
+    }
+
+    &--soustotal {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 300px;
+    }
+
+    &--soustotal li:last-child {
+      font-weight: lighter;
+    }
+
+    &--livraison {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 300px;
+      align-items: center;
+    }
+  }
+
+  &__article {
+    background-color: $blanc;
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+    align-items: center;
+    margin-bottom: 20px;
+    @media(max-width: 800px) {
+      align-items: normal;
+      padding-top: 10px;
+      justify-content: space-around;
+
+    }
+
+    &--image {
+      padding: 20px 0px 20px 5px;
+      width: 16.6%;
+      @media(max-width: 800px) {
+        padding: 0px;
+        width: 30%;
+      }
+    }
+
+    &--infos {
+      display: flex;
+      flex-direction: column;
+      width: 33.2%;
+      @media(max-width: 800px) {
+        width: auto;
+      }
+
+
+      &--titre {
+        font-size: 24px;
+        font-family: "Lato", sans-serif;
+        @media(max-width: 800px) {
+          font-size: 20px;
+        }
+      }
+
+      &--soustitre {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-family: "Lato", sans-serif;
+        @media(max-width: 800px) {
+          font-size: 16px;
+        }
+
+      }
+
+      &--auteur {
+        opacity: 60%;
+        font-style: italic;
+
+      }
+
+      &--prix {
+        font-size: 24px;
+        font-family: "Lato", sans-serif;
+        font-style: italic;
+        @media(max-width: 800px) {
+          font-size: 22px;
+        }
+      }
+    }
+
+    &--infos p {
+      margin: 0;
+      @media(max-width: 800px) {
+        padding-bottom: 5px;
+      }
+
+
+    }
+
+    &--form{
+      margin-bottom: 0px;
+      width: 16.6%;
+      margin-right: 40px;
+      @media(min-width: 801px) and (max-width: 1000px)  {
+        margin-left: 40px;
+      }
+      @media (max-width: 800px) {
+        margin-right: 0px;
+        width: auto;
+
+      }
+
+    }
+
+    &--quantite {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      @media(min-width: 801px) and (max-width: 1000px)  {
+        display: block;
+
+      }
+    }
+
+    &--quantite label {
+      margin-right: 10px;
+    }
+
+    &--retirer {
+      margin: 0px;
+      text-align: center;
+      width: 16.6%;
+
+      @media(min-width: 801px) and (max-width: 1000px)  {
+        margin-right: 40px;
+      }
+      @media(max-width: 800px) {
+        margin: 20px 0px 0px 0px;
+
+      }
+
+
+      &--btn {
+        border: none;
+        background-color: transparent;
+        text-decoration: underline;
+        border-bottom: transparent 2px solid;
+        transition: all .2s ease-in-out;
+      }
+      &--btn:hover{
+        border-bottom: $jauneBtnHover 2px solid;
+
+      }
+    }
+
+    &--prix {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 16.6%;
+      text-align: center;
+      @media(min-width: 801px) and (max-width: 1000px)  {
+        display: block;
+
+      }
+      @media(max-width: 800px) {
+        justify-content: flex-end;
+        margin-right: 10px;
+        width: auto;
+
+
+      }
+
+
+      &--total {
+        font-weight: bold;
+        margin-right: 5px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__vide {
+    text-align: center;
+  }
+
+
+  &__infos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &--section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 300px;
+
+      &--prixtotal {
+        font-weight: bold;
+
+      }
+
+    }
+
+    &--section p {
+      width: 50%;
+      text-align: right;
+    }
+    &--section p:first-child{
+      @media(max-width: 800px) {
+        text-align: left;
+      }
+    }
+
+    &--separation {
+      width: 400px;
+      border: 2px solid $blanc;
+      margin-right: 0;
+      text-align: right;
+      margin-top: 20px;
+      @media(max-width: $tablettePortrait) {
+        width: 300px;
+
+      }
+
+    }
+  }
+
+  &__boutons {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    @media(min-width: $tablettePortrait) {
+      justify-content: flex-end;
+      flex-direction: row;
+    }
+
+    &--magasin {
+      text-decoration: underline;
+      margin-bottom: 30px;
+      @media(min-width: $tablettePortrait) {
+        margin-bottom: 0px;
+        align-self: center;
+      }
+    }
+
+    &--commande {
+      background-color: $jauneBtn;
+      padding: 16px 60px 16px 60px;
+      border-radius: 2px;
+      border: none;
+      color: black;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      margin-left: 0px;
+      @media(min-width: $tablettePortrait) {
+        margin-left: 100px;
+      }
+    }
+
+    &--commande:hover {
+      background-color: $jauneBtnHover;
+      box-shadow: 0px 2px 4px rgba(39, 39, 39, 0.25);
+    }
+  }
+
+}
+
+.soustotalArticle{
+  margin-right: 3px;
+}
+.nbrItem{
+  margin: 0px 3px;
+}
+
+.changerQte{
+  display: none;
+}
+
+li.panier__infos--section p:last-child{
+  @media(max-width: 800px) {
+    text-align: right;
+  }
+}

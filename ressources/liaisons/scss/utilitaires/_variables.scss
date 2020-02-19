@@ -1,0 +1,39 @@
+/**
+ * @author Alexandre Blanchet <alexandre.blanchet.ab@gmail.com>
+ * ------------------
+ * TABLE DES MATIÈRES
+ * ------------------
+ * Polices de caractères
+ * Palette de couleurs
+ * Points de rupture
+ **/
+
+/** Polices de caractères **/
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Prata&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i&display=swap&subset=latin-ext');
+
+$policeTitres: 'Prata', serif;
+$policeCorps: 'Lato', sans-serif;
+
+
+/** Palette de couleurs **/
+// Au besoin utiliser http://chir.ag/projects/name-that-color pour nommer les couleurs
+
+$noir: #000;
+$jauneBtn : #FFD733;
+$jauneBtnHover : #F9D12B;
+$grisNoir : #2F313B;
+$gris : #ECEBEB;
+$grisPale : #F4F4F4;
+$grisFoncer : #E6E5E5;
+$blanc : #FFF;
+
+
+
+/** Points de rupture **/
+$tablettePortrait : 600px;
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+$bureau : 1000px;
+/* hi-res laptops and desktops */

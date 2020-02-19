@@ -1,0 +1,112 @@
+/**
+ * @author Alexandre Blanchet <alexandre.blanchet.ab@gmail.com>
+*/
+
+@include border-box-sizing;
+
+
+#btn__RetourHaut{
+  width: 50px;
+  height: 35px;
+  background-color: #F9D12B;
+  display: block;
+  position: fixed;
+  bottom: 90px;
+  right: 5px;
+  background-position: center;
+  background-image: url(../images/svg/upArrow.svg);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  @media(min-width: 600px){
+    display: none;
+  }
+}
+
+.skipnav {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/*** Grille ***/
+
+@media(max-width:600px){
+  $susy: (
+          'columns': susy-repeat(4),
+          'gutters': 0.25,
+          'spread': 'wide',
+          'container-spread': 'wide',
+  );
+  .conteneur {
+    //background: susy-svg-grid($susy) no-repeat scroll;
+  }
+}
+@media(min-width:601px) {
+  $susy: (
+          'columns': susy-repeat(12),
+          'gutters': 0.25,
+          'spread': 'narrow',
+          'container-spread': 'narrow'
+  );
+  .conteneur {
+    //background: susy-svg-grid($susy) no-repeat scroll;
+  }
+}
+
+.conteneur {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+html {
+  background-color: $grisPale;
+}
+
+.onlyTable{
+  display: none;
+  @media(min-width: $tablettePortrait+1) {
+    display: block;
+  }
+}
+
+.onlyMobile{
+  @media(min-width: $tablettePortrait+1) {
+    display: none;
+  }
+}
+
+a {
+text-decoration: none;
+  color: inherit;
+  &.classic{
+    text-decoration: underline;
+    color:blue;
+    &:visited{
+      color:purple;
+    }
+  }
+}
+
+.filDariane {
+  a {
+    text-decoration: underline;
+    border-bottom: transparent 2px solid;
+
+    &:hover {
+      border-bottom: $jauneBtn 2px solid;
+    }
+  }
+}
+
+.js{
+  & .btnHidden{
+    display:none;
+  }
+}

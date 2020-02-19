@@ -1,0 +1,197 @@
+h4 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+footer {
+  background-color: $blanc;
+}
+
+.pied {
+  padding-top: 30px;
+  margin: 90px 10px 0px 10px;
+
+  &__transaction {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $blanc;
+    height: 100px;
+    display: flex;
+
+    &--logo {
+      width: 233px;
+      height: 80px;
+      background-image: url("../../../public/liaisons/images/svg/logo.svg");
+      background-size: 233px 80px;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0 auto;
+    }
+  }
+
+  &__recherche {
+    text-align: center;
+    border-bottom: 2px solid $jauneBtn;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: none;
+
+    @media(min-width: $tablettePortrait) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      padding-top: 50px;
+      border-bottom: none;
+    }
+
+    &--logo {
+      width: 233px;
+      height: 80px;
+      background-image: url("../../../public/liaisons/images/svg/logo.svg");
+      background-size: 233px 80px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+
+    &--logoMobile {
+      @media(max-width: $tablettePortrait) {
+        padding-top: 150px;
+        margin: 0 auto;
+        display: block;
+        width: 233px;
+        height: 80px;
+        background-image: url("../../../public/liaisons/images/svg/logo.svg");
+        background-size: 233px 80px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    &--form {
+      display: none;
+      @media(min-width: $tablettePortrait) {
+        display: block;
+      }
+    }
+  }
+
+  &__conteneur {
+    @media(min-width: $tablettePortrait) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: baseline;
+    }
+  }
+
+  &__conteneur a:hover {
+    @media(min-width: $tablettePortrait) {
+      border-bottom: 3px solid $jauneBtnHover;
+    }
+  }
+
+  &__menu {
+    border-bottom: 2px solid $jauneBtn;
+    @media(min-width: $tablettePortrait) {
+      border-bottom: none;
+
+    }
+    @media(min-width: $tablettePortrait) {
+    }
+
+
+    &--lien {
+      margin: 21.280px 0px 21.280px 0px;
+      @media(min-width: $tablettePortrait) {
+      }
+    }
+
+    &--lien a {
+      text-decoration: none;
+      color: black;
+      @media(min-width: $tablettePortrait) {
+      }
+    }
+  }
+
+  &__joindre {
+    border-bottom: 2px solid $jauneBtn;
+    @media(min-width: $tablettePortrait) {
+      border-bottom: none;
+
+    }
+
+    &--titre {
+      font-weight: bold;
+      font-size: 18px;
+      @media(min-width: $tablettePortrait) {
+        border-bottom: 2px solid $jauneBtn;
+
+      }
+    }
+  }
+
+  &__politiques {
+    &--titre {
+      font-weight: bold;
+      font-size: 18px;
+      @media(min-width: $tablettePortrait) {
+        border-bottom: 2px solid $jauneBtn;
+      }
+    }
+  }
+
+  &__suivreTable {
+    display: none;
+    @media(min-width: $tablettePortrait) {
+      display: block;
+    }
+
+    &--titre {
+      @media(min-width: $tablettePortrait) {
+        border-bottom: 2px solid $jauneBtn;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+    }
+
+    &--icone {
+      width: 70px;
+      height: 70px;
+      @media(min-width: $tablettePortrait) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  &__suivreMobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: 2px solid $jauneBtn;
+    border-bottom: 2px solid $jauneBtn;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @media(min-width: $tablettePortrait) {
+      display: none;
+    }
+
+    &--titre {
+      display: none;
+    }
+  }
+
+  &__droits {
+    display: block;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+  }
+}

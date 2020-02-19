@@ -1,0 +1,126 @@
+/**
+ * @author Alexandre Blanchet <alexandre.blanchet.ab@gmail.com>
+**/
+
+/**
+ * --------------------------------------------------------
+ * TABLE DES MATIÈRES - Typographie responsive (Mobile First)
+ * --------------------------------------------------------
+ * Base décimale
+ * Hiérarchie responsive
+ */
+
+
+/** Base décimale **/
+html{
+  font-size: 62.5%;
+  font-family: $policeCorps;
+}
+body {
+  /* 16px pour toutes les largeurs d'écran */
+  @include fontSize(16px);
+  /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
+  line-height: 1.375;
+  font-family: $policeCorps;
+}
+@media (min-width: $tablettePortrait) {
+  body {
+    line-height: 1.5;
+  }
+}
+@media (min-width: $bureau) {
+  body {
+    line-height: 1.75;
+  }
+}
+
+
+/** Hiérarchie responsive **/
+/*  plus proche = plus petit  &  plus loin = plus grand */
+
+/* TITRES NIVEAU 1 */
+h1,
+.h1 { /* = 32px */
+  @include fontSize(32px);
+  font-family: $policeTitres;
+}
+@media (min-width: $tablettePortrait) {
+  h1,
+  .h1 { /* = 40px */
+    @include fontSize(40px);
+  }
+}
+@media (min-width: $bureau) {
+  h1,
+  .h1 { /* = 48px */
+    @include fontSize(48px);
+  }
+}
+
+
+/* TITRES NIVEAU 2 */
+h2,
+.h2 { /* = 24px */
+  @include fontSize(24px);
+  font-family: $policeTitres;
+}
+@media (min-width: $tablettePortrait) {
+  h2,
+  .h2 { /* = 32px */
+    @include fontSize(32px);
+  }
+}
+@media (min-width: $bureau) {
+  h2,
+  .h2 { /* = 36px */
+    @include fontSize(36px);
+  }
+}
+
+
+/* TITRES NIVEAU 3 */
+h3,
+.h3 { /* = 18px */
+  @include fontSize(18px);
+}
+@media (min-width: $tablettePortrait) {
+  h3,
+  .h3 {  /* = 24px */
+    @include fontSize(24px);
+  }
+}
+@media (min-width: $bureau) {
+  h3,
+  .h3 { /* = 30px */
+    @include fontSize(30px);
+  }
+}
+
+
+/* TITRES NIVEAU 4 */
+h4,
+.h4 { /* = 16px */
+  @include fontSize(16px);
+}
+@media (min-width: $tablettePortrait) {
+  h4,
+  .h4 { /* = 18px */
+    @include fontSize(18px);
+  }
+}
+
+@media (min-width: $bureau) {
+  h4,
+  .h4 { /* = 22px */
+    @include fontSize(22px);
+  }
+}
+
+
+.validation__h3{
+  font-family: $policeTitres;
+  margin: 0 0 10px 0;
+  @media (min-width: 600px) {
+
+  }
+}
